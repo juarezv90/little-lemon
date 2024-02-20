@@ -1,0 +1,22 @@
+nav {
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    padding: 1rem 20%;
+    top:0;
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style: none;
+        gap: 1rem;
+
+        a
+        {
+
+            text-decoration: none;
+        }
+    }
+}
