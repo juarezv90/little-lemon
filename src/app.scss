@@ -1,12 +1,84 @@
-* {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+@import "./Variables.scss";
+
+html {
+  font-size: 16px;
 }
-#root {
-    display: grid;
+
+h1 {
+  font-size: 52px;
+}
+
+h4 {
+  font-size: 32px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+button {
+  background-color: $primary-color2;
+  color: $highlight-color2;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 18px;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background: $secondary-color1;
+  }
+}
+
+div.card {
+  width: 264px;
+  display: flex;
+  flex-direction: column;
+  font-family: $markazi;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  overflow: hidden;
+  background-color: $highlight-color1;
+
+  img {
     width: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 3fr;
-    margin-top: 72px;
+  }
+
+  .card_data 
+  {
+    display: grid;
+    gap: 1rem;
+    padding: 0 1rem;
+    margin: 1rem 0;
+
+    .card_head {
+      display: flex;
+      font-size: 24px;
+      font-weight: bolder;
+      justify-content: space-between;
+
+      .price {
+        color: $secondary-color1;
+      }
+    }
+
+    strong {
+      display: flex;
+      gap: 1rem;
+
+      img {
+        width: 20px;
+      }
+    }
+  }
+}
+
+#root {
+  display: grid;
+  width: 100%;
+  margin-top: 123px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 406px auto 417px;
 }

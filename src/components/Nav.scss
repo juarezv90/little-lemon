@@ -1,22 +1,40 @@
+@import "../Variables.scss";
+
+
 nav {
-    position: fixed;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  transition: 300ms ease-out;
+  background-color: $highlight-color1;
+
+  div {
     display: flex;
-    width: 100vw;
+    width: 880px;
+    height: 123px;
+    margin: 0 auto;
     justify-content: space-between;
-    padding: 1rem 20%;
-    top:0;
+    align-items: center;
+
+    img {
+      height: 70px;
+    }
 
     ul {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        list-style: none;
-        gap: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+      gap: 1rem;
 
-        a
-        {
+      a {
+        text-decoration: none;
+      }
 
-            text-decoration: none;
-        }
+      button {
+        padding: .5rem 1.25rem;
+        font-size: 1rem;
+      }
     }
+  }
 }

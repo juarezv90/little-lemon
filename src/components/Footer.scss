@@ -1,0 +1,44 @@
+@import "../Variables.scss";
+
+footer {
+  display: flex;
+  background-color: $secondary-color2;
+  font-family: $markazi;
+  div {
+    display: flex;
+    width: 882px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    align-items: flex-start;
+
+    img {
+      width: 169px;
+      height: 279px;
+      object-fit: cover;
+      object-position: left center;
+      margin-right: 3rem;
+    }
+
+    h2 {
+      font-family: $karla;
+      color: $primary-color1;
+    }
+
+    ul {
+      align-self: self-start;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-right: 3rem;
+      width: 200px;
+
+      a {
+        text-decoration: none;
+      }
+
+      li {
+        list-style: none;
+      }
+    }
+  }
+}

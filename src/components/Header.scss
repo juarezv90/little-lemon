@@ -1,0 +1,41 @@
+@import "../Variables.scss";
+
+header {
+  width: 100%;
+  font-family: $karla;
+  background-color: $primary-color1;
+
+  .container {
+    display: flex;
+    width: 883px;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .left {
+      width: 375px;
+
+      p {
+        font-size: 20px;
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+      }
+
+      button {
+        width: 200px;
+        height: 60px;
+        padding: 1rem 2rem;
+      }
+    }
+
+    .right {
+      img {
+        width: 375px;
+        height: 325px;
+        object-fit: cover;
+      }
+    }
+  }
+}
