@@ -1,5 +1,4 @@
-@import "../Variables.scss";
-
+@use "../Variables.scss" as *;
 
 nav {
   position: fixed;

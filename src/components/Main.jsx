@@ -1,6 +1,5 @@
 import React, { useEffect,useState } from "react";
 import Card from "./Card";
-import "./Menu.scss"
 
 function Main() {
   const [data, setdata] = useState([]);

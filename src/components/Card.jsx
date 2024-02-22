@@ -8,7 +8,7 @@ function Card({imgUrl, title, price, mealInfo}) {
       <img src={imgUrl} alt="" className="cardImage"/>
       <div className="card_data">
         <div className="card_head">
-          <p className="title">{title}</p> <p className="price">${price}</p>
+          <p className="title">{title}</p> <p className="price">${price.toFixed(2)}</p>
         </div>
         <p>
           {mealInfo}

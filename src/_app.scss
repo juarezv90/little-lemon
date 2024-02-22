@@ -1,0 +1,32 @@
+@use "./Variables.scss" as *;
+
+html {
+  font-size: 16px;
+}
+
+
+h1 {
+  font-size: 52px;
+}
+
+h4 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+#root {
+  display: grid;
+  width: 100%;
+  margin-top: 123px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 406px auto 417px;
+}

@@ -1,0 +1,52 @@
+@use "../Variables" as *;
+
+div.card {
+    width: 264px;
+    height: 439px;
+    display: flex;
+    flex-direction: column;
+    font-family: $markazi;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    overflow: hidden;
+    background-color: $highlight-color1;
+  
+    img.cardImage {
+      width: 264px;
+      height: 175px;
+      object-fit: cover;
+      flex-grow: 1;
+    }
+  
+    .card_data 
+    {
+      display: grid;
+      height: 100%;
+      gap: 1rem;
+      padding: 0 1rem;
+      margin: 1rem 0;
+  
+      .card_head {
+        display: flex;
+        font-size: 24px;
+        font-weight: bolder;
+        justify-content: space-between;
+  
+        .price {
+          color: $secondary-color1;
+        }
+      }
+  
+      strong {
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-start;
+        align-items: flex-end;
+  
+        img {
+          width: 20px;
+        }
+      }
+    }
+  }
+  

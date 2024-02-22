@@ -1,4 +1,4 @@
-@import "../Variables.scss";
+@use "../Variables.scss" as *;
 
 section.menu{
     width: 858px;

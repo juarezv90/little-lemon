@@ -1,0 +1,15 @@
+@use "../Variables" as *;
+
+button {
+    background-color: $primary-color2;
+    color: $highlight-color2;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 18px;
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+  
+    &:hover {
+      background: $secondary-color1;
+    }
+  }
