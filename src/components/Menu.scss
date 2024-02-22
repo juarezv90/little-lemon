@@ -1,0 +1,24 @@
+@import "../Variables.scss";
+
+section.menu{
+    width: 858px;
+    display: grid;
+    margin: 8rem auto;
+
+    .menuHeader {
+        display:flex;
+        justify-content: space-between;
+        margin-bottom: 5rem;
+
+        button {
+            width: 200px;
+            height: 60px;
+        }
+    }
+
+    .menuCards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 32px;
+    }
+}

@@ -9,7 +9,7 @@ function Nav() {
 
   useEffect(() => {
     const handleScroll = () => {
-        // setPosition({prev: position.current, current: window.scrollY})
+        setPosition({prev: position.current, current: window.scrollY})
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -17,10 +17,10 @@ function Nav() {
     return (()=> {
       window.removeEventListener('scroll', handleScroll)
     })
-  }, [position.current]);
+  }, [position]);
 
   return (
-    <nav style={position.prev < position.current ? {top: -123} : {top:0}}>
+    <nav style={position.prev < position.current && position.current > 123 ? {top: -123} : {top:0}}>
       <div>
         <img src="./logo.svg" alt="Logo" />
         <ul>
