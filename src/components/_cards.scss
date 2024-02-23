@@ -9,7 +9,7 @@ div.card {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     overflow: hidden;
-    background-color: $highlight-color1;
+    background-color: darken($highlight-color1, 5%);
   
     img.cardImage {
       width: 264px;
@@ -33,11 +33,11 @@ div.card {
         justify-content: space-between;
   
         .price {
-          color: $secondary-color1;
+          color: darken($secondary-color1,10%);
         }
       }
   
-      strong {
+      p.order {
         display: flex;
         gap: 1rem;
         justify-content: flex-start;
@@ -46,6 +46,17 @@ div.card {
         img {
           width: 20px;
         }
+      }
+    }
+
+    @media screen and (max-width:$small-scrn) {
+      & {
+        width:80%;
+        height: auto;
+        margin: 0 auto;
+      }
+      img.cardImage {
+        width: 100%;
       }
     }
   }

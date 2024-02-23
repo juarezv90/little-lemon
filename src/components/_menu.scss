@@ -1,24 +1,38 @@
 @use "../Variables.scss" as *;
 
-section.menu{
-    width: 858px;
+section.menu {
+  width: 858px;
+  display: grid;
+  margin: 8rem auto;
+
+  .menuHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+
+    button {
+      width: 200px;
+      height: 60px;
+    }
+  }
+
+  .menuCards {
     display: grid;
-    margin: 8rem auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+  }
 
-    .menuHeader {
-        display:flex;
-        justify-content: space-between;
-        margin-bottom: 5rem;
+  @media screen and (max-width: $small-scrn) {
+    & {
+      width: 100%;
+      margin:3rem 0;
 
-        button {
-            width: 200px;
-            height: 60px;
-        }
+      .menuHeader {
+        padding: 0 1rem;
+      }
+      .menuCards {
+        grid-template-columns: 1fr;
+      }
     }
-
-    .menuCards {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 32px;
-    }
+  }
 }

@@ -2,13 +2,15 @@
 
 header {
   width: 100%;
+  height: auto;
   font-family: $karla;
   background-color: $primary-color1;
+  color: $highlight-color1;
 
   .container {
     display: flex;
     width: 883px;
-    height: 100%;
+    height: auto;
     margin: 0 auto;
     padding-top: 2rem;
     justify-content: space-between;
@@ -35,6 +37,24 @@ header {
         width: 375px;
         height: 325px;
         object-fit: cover;
+      }
+    }
+  }
+
+  @media screen and (max-width: $small-scrn) {
+    & {
+      min-width: 400px;
+      .container {
+        justify-content: flex-start;
+        width: 100%;
+        padding: 2rem;
+        .left {
+          width: 100%;
+        }
+        .right img {
+          width: 100%;
+        }
+
       }
     }
   }

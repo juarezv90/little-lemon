@@ -4,6 +4,7 @@ footer {
   display: flex;
   background-color: $secondary-color2;
   font-family: $markazi;
+
   div {
     display: flex;
     width: 882px;
@@ -19,13 +20,13 @@ footer {
       margin-right: 3rem;
     }
 
-    h2 {
+    h4 {
       font-family: $karla;
       color: $primary-color1;
+      font-size: 1.75rem;
     }
 
     ul {
-      align-self: self-start;
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
@@ -38,6 +39,24 @@ footer {
 
       li {
         list-style: none;
+      }
+    }
+  }
+
+  @media screen and (max-width:$small-scrn) {
+    & {
+      width: 100%;
+      div{
+        width:100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+
+        img {
+          width: 100px;
+          height: 125px;
+        }
       }
     }
   }

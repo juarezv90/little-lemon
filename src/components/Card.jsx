@@ -13,9 +13,9 @@ function Card({imgUrl, title, price, mealInfo}) {
         <p>
           {mealInfo}
         </p>
-        <strong>
-          Order a Delivery <img src="./dishicon.svg" alt="" />
-        </strong>
+        <p className="order">
+          Order a Delivery <img src="./dishicon.svg" alt="" loading="lazy"/>
+        </p>
       </div>
     </div>
   );

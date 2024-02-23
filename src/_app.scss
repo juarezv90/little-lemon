@@ -4,29 +4,42 @@ html {
   font-size: 16px;
 }
 
-
 h1 {
   font-size: 52px;
 }
 
-h4 {
-  font-size: 32px;
+h2 {
+  font-size: 40px;
 }
 
 h3 {
-  font-size: 40px;
+  font-size: 36px;
 }
 
 * {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  transition: 300ms ease-out;
 }
 
 #root {
   display: grid;
   width: 100%;
+  min-width: 400px;
   margin-top: 123px;
   grid-template-columns: 1fr;
   grid-template-rows: 406px auto 417px;
+
+  @media screen and (max-width:$small-scrn) {
+    & {
+      grid-template-rows: auto 1fr auto;
+    }
+  }
+
+}
+
+main {
+  width: 100%;
+  height: auto;
 }

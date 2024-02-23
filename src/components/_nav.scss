@@ -4,10 +4,9 @@ nav {
   position: fixed;
   width: 100vw;
   top: 0;
-  transition: 300ms ease-out;
   background-color: $highlight-color1;
 
-  div {
+  menu {
     display: flex;
     width: 880px;
     height: 123px;
@@ -19,7 +18,7 @@ nav {
       height: 70px;
     }
 
-    ul {
+    ul.horizontal {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -34,6 +33,20 @@ nav {
         padding: .5rem 1.25rem;
         font-size: 1rem;
       }
+    }
+  }
+
+  @media screen and (max-width:$small-scrn) {
+    & {
+      width: 100%;
+
+       menu {
+        width: 100%;
+
+        ul.horizontal {
+          display: none;
+        }
+       }
     }
   }
 }

@@ -6,7 +6,7 @@ function Header() {
       <div className="container">
         <div className="left">
           <h1>Little Lemon</h1>
-          <h4>Chicago</h4>
+          <span style={{fontSize:"32px", fontWeight:"bold"}}>Chicago</span>
           <p>
             Little Lemon is a charming neighborhood bistro that serves simple
             food and classic cocktails in a lively but casual environment. The
@@ -15,7 +15,7 @@ function Header() {
           <button>Reserve a Table</button>
         </div>
         <div className="right">
-          <img src="./restaurant.jpg" alt="" />
+          <img src="./restaurant.jpg" alt="" width={100} height={100} loading="lazy"/>
         </div>
       </div>
     </header>

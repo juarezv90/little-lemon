@@ -1,0 +1,42 @@
+@use "../Variables.scss" as *;
+
+article.tcard {
+  display: grid;
+  width: 200px;
+  height: 175px;
+  background-color: $highlight-color1;
+  
+  
+  p {
+      display: flex;
+      line-break: auto;
+      align-items: center;
+      margin-bottom: 1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      font-size: 14px;
+      text-overflow: ellipsis ;
+      overflow: hidden;
+
+    &:first-child {
+      margin-top: 1rem;
+    }
+
+    &:last-child {
+        margin-bottom: 1rem;
+    }
+
+    &.rating,
+    &.name {
+      font-weight: bold;
+    }
+
+    img {
+      width: 47px;
+      height: 47px;
+      object-fit: cover;
+      border: 1px solid black;
+      margin-right: 8px;
+    }
+  }
+}
