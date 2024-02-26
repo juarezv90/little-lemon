@@ -37,9 +37,15 @@ h3 {
     }
   }
 
+  @media screen and (max-width:$med-scrn) {
+    &{
+      grid-template-rows: auto 1fr auto;
+    }
+  }
+
 }
 
 main {
+  position: relative;
   width: 100%;
-  height: auto;
 }

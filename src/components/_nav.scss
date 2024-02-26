@@ -2,6 +2,7 @@
 
 nav {
   position: fixed;
+  z-index: 1001;
   width: 100vw;
   top: 0;
   background-color: $highlight-color1;
@@ -14,8 +15,12 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    img {
+    img.logo {
       height: 70px;
+    }
+
+    ul li{
+      cursor: pointer;
     }
 
     ul.horizontal {
@@ -30,23 +35,56 @@ nav {
       }
 
       button {
-        padding: .5rem 1.25rem;
+        padding: 0.5rem 1.25rem;
         font-size: 1rem;
+      }
+    }
+
+    .verticalBurgerMenu {
+      display: none;
+      width: 3rem;
+    }
+
+    ul.vertical {
+      display: none;
+      position: fixed;
+      top: 123px;
+      right: -500px;
+      font-size: 18px;
+      padding: 1rem 2rem;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      background-color: $secondary-color2;
+      li {
+        margin-top: 1rem;
+
+        button {
+          padding: 0.5rem 2rem;
+        }
       }
     }
   }
 
-  @media screen and (max-width:$small-scrn) {
+  @media screen and (max-width: $small-scrn) {
     & {
       width: 100%;
 
-       menu {
+      menu {
         width: 100%;
+        padding: 0 2rem;
 
         ul.horizontal {
           display: none;
         }
-       }
+        .verticalBurgerMenu{
+          display: inline;
+        }
+        ul.vertical {
+          display: block;
+        }
+      }
     }
   }
 }

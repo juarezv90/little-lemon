@@ -6,9 +6,12 @@ function Nav() {
     prev: 0
   });
 
+  const [vertMenu, setVertMenu] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       setPosition({ prev: position.current, current: window.scrollY });
+      setVertMenu(false)
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -27,7 +30,7 @@ function Nav() {
       }
     >
       <menu>
-        <img src="./logo.svg" alt="Logo" />
+        <img src="./logo.svg" alt="Logo" className="logo"/>
         <ul className="horizontal">
           <li>Home</li>
           <li>About</li>
@@ -38,7 +41,19 @@ function Nav() {
             <button>Login</button>
           </li>
         </ul>
+        <img src="./iconBurgerMenu.svg" alt="menu" className="verticalBurgerMenu" onClick={() => setVertMenu(!vertMenu)}/>
+        <ul className="vertical" style={vertMenu ? {right:0}:{right:-300}}>
+          <li>Home</li>
+          <li>About</li>
+          <li>Menu</li>
+          <li>Reservations</li>
+          <li>Order Online</li>
+          <li>
+            <button>Login</button>
+          </li>
+        </ul>
       </menu>
+     
     </nav>
   );
 }

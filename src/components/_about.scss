@@ -1,0 +1,84 @@
+@use "../Variables.scss" as *;
+
+section.about {
+  font-family: $markazi;
+  padding: 6rem 0;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 879px;
+    margin: 0 auto;
+    gap: 2rem;
+    .aboutDetails {
+      display: flex;
+      flex-direction: column;
+
+      .aboutHeader {
+        font-size: 60px;
+        font-weight: bold;
+      }
+      .aboutLocation {
+        font-size: 36px;
+        margin-bottom: 4rem;
+        font-weight: bold;
+      }
+    }
+    .aboutImages {
+      width: 100%;
+      height: 445px;
+
+      img {
+        border-radius: 1rem;
+      }
+
+      .imageA {
+        position: relative;
+        transform: translateX(220px) translateY(-60px);
+        object-fit: cover;
+        object-position: right center;
+        z-index: 2;
+      }
+      .imageB {
+        position: relative;
+        transform: translateX(100px) translateY(-180px);
+        object-fit: cover;
+        object-position: right center;
+        z-index: 1;
+      }
+    }
+  }
+
+  @media screen and (max-width: $small-scrn) {
+    padding: 2rem 0;
+    height: auto;
+
+    .container {
+      width: 75%;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 445px;
+
+      .aboutDetails {
+        width: 100%;
+
+        .aboutHeader {
+          font-size: 48px;
+        }
+      }
+
+      .aboutImages {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1rem;
+
+        .imageA,
+        .imageB {
+          aspect-ratio: 16/5;
+          width:100%;
+          margin: 0 auto;
+          transform: none;
+        }
+      }
+    }
+  }
+}

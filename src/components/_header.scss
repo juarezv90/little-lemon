@@ -58,4 +58,13 @@ header {
       }
     }
   }
+
+  @media screen and (min-width:$med-scrn) {
+    &{
+      .container {
+        padding: 2rem 1rem;
+      }
+     }
+    
+  }
 }

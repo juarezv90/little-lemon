@@ -1,20 +1,29 @@
 import React from "react";
 import Menu from "./Menu";
-import TestimonyCard from "./TestimonyCard";
+import Testimonies from "./Testimonies";
 
 function Main() {
   return (
     <main>
       <Menu />
-      <section className="testimonies">
+      <Testimonies />
+      <section className="about">
         <div className="container">
-          <h3>Testimonies</h3>
-          <div className="cardHolder">
-            <TestimonyCard />
-            <TestimonyCard />
-            <TestimonyCard />
-            <TestimonyCard />
-          </div>
+          <article className="aboutDetails">
+            <span className="aboutHeader">Little Lemon</span>
+            <span className="aboutLocation">Chicago</span>
+            <p>
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
+              Exercitation veniam consequat sunt nostrud amet. Amet minim mollit
+              non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+              officia consequat duis enim velit mollit.{" "}
+            </p>
+          </article>
+          <article className="aboutImages">
+            <img src="./MarioandAdrianA.jpg" alt="" width={276} height={338} className="imageA"/>
+            <img src="./MarioandAdrianB.jpg" alt="" width={276} height={338} className="imageB"/>
+          </article>
         </div>
       </section>
     </main>
