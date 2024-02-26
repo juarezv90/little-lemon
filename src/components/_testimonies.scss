@@ -22,9 +22,9 @@ section.testimonies {
     }
   }
 
-  @media screen and (max-width: $small-scrn) {
+  @media screen and (max-width: 768px) {
     & {
-      padding: 100px 0;
+      padding: 0 1rem 3rem;
       width: 100%;
       height: auto;
       .container {
@@ -33,14 +33,15 @@ section.testimonies {
 
         .cardHolder {
           grid-template-columns: 1fr;
+          gap:1rem;
         }
       }
     }
   }
 
-  @media screen and (max-width: $med-scrn) and (min-width:$small-scrn) {
+  @media screen and (max-width: $med-scrn) and (min-width:768px) {
     & {
-        padding: 0;
+        padding: 0 0 3rem 0;
       .container {
         grid-template-rows: 100px 1fr;
         .cardHolder {

@@ -23,6 +23,11 @@ h3 {
   transition: 300ms ease-out;
 }
 
+a, a:hover, a:focus, a:visited {
+  color: $highlight-color2;
+  text-decoration: none;
+}
+
 #root {
   display: grid;
   width: 100%;

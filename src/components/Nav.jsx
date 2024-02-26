@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Nav() {
   const [position, setPosition] = useState({
@@ -11,7 +12,7 @@ function Nav() {
   useEffect(() => {
     const handleScroll = () => {
       setPosition({ prev: position.current, current: window.scrollY });
-      setVertMenu(false)
+      setVertMenu(false);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -30,30 +31,61 @@ function Nav() {
       }
     >
       <menu>
-        <img src="./logo.svg" alt="Logo" className="logo"/>
+        <img src="./logo.svg" alt="Logo" className="logo" />
         <ul className="horizontal">
-          <li>Home</li>
-          <li>About</li>
-          <li>Menu</li>
-          <li>Reservations</li>
-          <li>Order Online</li>
           <li>
-            <button>Login</button>
+            <Link to="/" >Home</Link>
+          </li>
+          <li>
+            <Link>About</Link>
+          </li>
+          <li>
+            <Link>Menu</Link>
+          </li>
+          <li>
+            <Link to="/bookingpage">Reservations</Link>
+          </li>
+          <li>
+            <Link>Order Online</Link>
+          </li>
+          <li>
+            <Link>
+              <button>Login</button>
+            </Link>
           </li>
         </ul>
-        <img src="./iconBurgerMenu.svg" alt="menu" className="verticalBurgerMenu" onClick={() => setVertMenu(!vertMenu)}/>
-        <ul className="vertical" style={vertMenu ? {right:0}:{right:-300}}>
-          <li>Home</li>
-          <li>About</li>
-          <li>Menu</li>
-          <li>Reservations</li>
-          <li>Order Online</li>
+        <img
+          src="./iconBurgerMenu.svg"
+          alt="menu"
+          className="verticalBurgerMenu"
+          onClick={() => setVertMenu(!vertMenu)}
+        />
+        <ul
+          className="vertical"
+          style={vertMenu ? { right: 0 } : { right: -300 }}
+        >
           <li>
-            <button>Login</button>
+            <Link to="/" onClick={() => setVertMenu(false)}>Home</Link>
+          </li>
+          <li>
+            <Link>About</Link>
+          </li>
+          <li>
+            <Link>Menu</Link>
+          </li>
+          <li>
+            <Link to="/bookingpage" onClick={() => setVertMenu(false)}>Reservations</Link>
+          </li>
+          <li>
+            <Link>Order Online</Link>
+          </li>
+          <li>
+            <Link>
+              <button>Login</button>
+            </Link>
           </li>
         </ul>
       </menu>
-     
     </nav>
   );
 }

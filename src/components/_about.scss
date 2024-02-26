@@ -8,7 +8,7 @@ section.about {
     grid-template-columns: 1fr 1fr;
     width: 879px;
     margin: 0 auto;
-    gap: 2rem;
+    gap: 4rem;
     .aboutDetails {
       display: flex;
       flex-direction: column;
@@ -33,14 +33,14 @@ section.about {
 
       .imageA {
         position: relative;
-        transform: translateX(220px) translateY(-60px);
+        transform: translateX(120px) translateY(-60px);
         object-fit: cover;
         object-position: right center;
         z-index: 2;
       }
       .imageB {
         position: relative;
-        transform: translateX(100px) translateY(-180px);
+        transform: translateX(0px) translateY(-180px);
         object-fit: cover;
         object-position: right center;
         z-index: 1;

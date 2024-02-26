@@ -42,7 +42,7 @@ nav {
 
     .verticalBurgerMenu {
       display: none;
-      width: 3rem;
+      width: 2rem;
     }
 
     ul.vertical {
@@ -56,9 +56,13 @@ nav {
       display: flex;
       flex-direction: column;
       list-style: none;
-      background-color: $secondary-color2;
+      background-color: $highlight-color1;
       li {
         margin-top: 1rem;
+
+        &:hover{
+          border-bottom: 1px solid black;
+        }
 
         button {
           padding: 0.5rem 2rem;
@@ -78,9 +82,11 @@ nav {
         ul.horizontal {
           display: none;
         }
+
         .verticalBurgerMenu{
           display: inline;
         }
+
         ul.vertical {
           display: block;
         }

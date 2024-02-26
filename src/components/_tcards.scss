@@ -39,4 +39,8 @@ article.tcard {
       margin-right: 8px;
     }
   }
+
+  @media screen and (max-width:768px) {
+    width: 100%;
+  }
 }
