@@ -25,11 +25,13 @@ function BookingPage({availableTimes, dispatch}) {
 }
 
 function App() {
+  
   const updateTimes = (state, action) => {
     return state;
   };
 
   const initializeTime = () => {
+    
     let item =[]
 
     for(let i = 16; i < 23 ; i++){
