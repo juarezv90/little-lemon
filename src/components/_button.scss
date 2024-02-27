@@ -1,6 +1,6 @@
 @use "../Variables" as *;
 
-button {
+button, input[type=submit] {
     background-color: $primary-color2;
     color: $highlight-color2;
     border: none;
