@@ -1,0 +1,25 @@
+@use "../Variables.scss" as *;
+
+section.confirmed {
+    display: grid;
+    width: 500px;
+    grid-template-rows: repeat(auto-fill, 100px);
+    margin: 0 auto;
+    font-family: $karla;
+
+    h3 {
+        margin-top: 1rem;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    button {
+        width: 200px;
+        height: 40px;
+        padding: .25rem 2rem;
+    }
+
+
+}
