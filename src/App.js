@@ -6,7 +6,7 @@ import "./Global.scss";
 import BookingForm from "./components/BookingForm";
 import Header from "./components/Header";
 import { useReducer } from "react";
-import { fetchAPI, submitAPI } from "./bookingAPI";
+import { fetchAPI } from "./bookingAPI";
 import Confirmed from "./components/Confirmed";
 
 function HomePage() {

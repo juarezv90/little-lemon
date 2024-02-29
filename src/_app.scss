@@ -31,10 +31,11 @@ a, a:hover, a:focus, a:visited {
 main {
   display: grid;
   width: 100%;
+  height: 100vh;
   min-width: 400px;
   margin-top: 123px;
   grid-template-columns: 1fr;
-  grid-template-rows: 406px auto 417px;
+  grid-template-rows: 406px auto-fill 417px;
 
   @media screen and (max-width:$small-scrn) {
     & {
@@ -48,9 +49,4 @@ main {
     }
   }
 
-}
-
-main {
-  position: relative;
-  width: 100%;
 }
